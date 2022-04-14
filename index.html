@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceTogether</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="shortcut icon" href="img/tt-logo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="img/tt-logo.svg" alt="trace-together"></img>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-lg-end" id="navbarSupportedContent">
+                <form class="bg-transparent d-grid d-lg-flex gap-2">
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdropRegister">Register</button>
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdropLogin">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="staticBackdropRegister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" style="margin-top: 4rem;">
+            <div class="modal-content">
+                <div class="modal-header py-2">
+                    <h5 class="modal-title text-success" id="staticBackdropLabel">Register</h5>
+                    <button type="button" id="close-register" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="container-fluid">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                <div class="col-md-9 col-lg-6 col-xl-5">
+                                    <img src="img/register-animation.svg" class="img-fluid" alt="Sample image">
+                                </div>
+                                <div class="col-md-9 col-lg-6 col-xl-4 offset-xl-1">
+                                    <form class="needs-validation" action="https://google.com" novalidate>
+                                        <div class="d-flex align-items-center">
+                                            <p class="fw-normal mb-0 mx-auto">Sign in with</p>
+                                            <button type="button" class="btn btn-outline-success w-brand mx-auto">
+                                                <i class="fab fa-facebook-messenger"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-success w-brand mx-auto">
+                                                <i class="fab fa-google-plus-g"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-success w-brand mx-auto">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="divider d-flex align-items-center my-4">
+                                            <p class="text-center fw-bold mx-3 mb-0">OR</p>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="user-name" class="form-control form-control-lg" required>
+                                                <label class="form-label" for="user-name" style="margin-left: 0px;">Your Name</label>
+                                                <div class="form-notch">
+                                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                                    <div class="form-notch-middle" style="width: 71.2px;"></div>
+                                                    <div class="form-notch-trailing"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="email" id="user-email" class="form-control form-control-lg" required>
+                                                <label class="form-label" for="user-email" style="margin-left: 0px;">Your Email</label>
+                                                <div class="form-notch">
+                                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                                    <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                                    <div class="form-notch-trailing"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="password" id="user-password" class="form-control form-control-lg" required>
+                                                <label class="form-label" for="user-password" style="margin-left: 0px;">Password</label>
+                                                <div class="form-notch">
+                                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                                    <div class="form-notch-middle" style="width: 64.8px;"></div>
+                                                    <div class="form-notch-trailing"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <!-- Checkbox -->
+                                            <div class="form-check mb-0">
+                                                <input class="form-check-input me-2" type="checkbox" id="form2Example3" />
+                                                <label class="form-check-label" for="form2Example3">I agree to the
+                                                    <a href="#!" class="">terms & conditions</a>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center text-lg-start mt-4 pt-2 d-grid gap-2">
+                                            <button type="submit" class="btn btn-success fw-bold">Register</button>
+                                            <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? 
+                                                <a href="#!" class="link-primary" data-bs-target="#staticBackdropLogin" data-bs-toggle="modal">Login</a>
+                                            </p>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="d-flex flex-column flex-md-row text-center rounded text-md-start justify-content-between py-2 px-2 mt-xl-1 px-xl-3">
+                            Copyright 
+                            <div class="text-success mb-0"> 2022© Kelompok 6. All rights reserved.</div>
+                        </div> -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="staticBackdropLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" style="margin-top: 4rem;">
+            <div class="modal-content">
+                <div class="modal-header py-2">
+                    <h5 class="modal-title text-primary" id="staticBackdropLabel">Login</h5>
+                    <button type="button" id="close-login" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="container-fluid">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                <div class="col-md-9 col-lg-6 col-xl-5">
+                                    <img src="img/login-animation.svg" class="img-fluid" alt="Sample image">
+                                </div>
+                                <div class="col-md-9 col-lg-6 col-xl-4 offset-xl-1">
+                                    <form class="needs-validation" method="get" novalidate>
+                                        <div class="d-flex align-items-center">
+                                            <p class="fw-normal mb-0 mx-auto">Continue with</p>
+                                            <button type="button" class="btn btn-primary w-brand mx-auto">
+                                                <i class="fab fa-facebook-messenger"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-primary w-brand mx-auto">
+                                                <i class="fab fa-google-plus-g"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-primary w-brand mx-auto">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="divider d-flex align-items-center my-4">
+                                            <p class="text-center fw-bold mx-3 mb-0">OR</p>
+                                        </div>
+
+                                        <!-- Email input -->
+                                        <div class="form-floating mb-4">
+                                            <input type="email" name="email" id="form3Example3" class="form-control"
+                                                placeholder="Enter a valid email address" required />
+                                            <div class="invalid-feedback">
+                                                This field is required
+                                            </div>
+                                            <label class="form-label" for="form3Example3">Email address</label>
+                                        </div>
+
+                                        <!-- Password input -->
+                                        <div class="form-floating mb-3">
+                                            <input type="password" name="password" id="form3Example4" class="form-control"
+                                                placeholder="Enter password" required />
+                                            <div class="invalid-feedback">
+                                                This field is required
+                                            </div>
+                                            <label class="form-label" for="form3Example4">Password</label>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <!-- Checkbox -->
+                                            <div class="form-check mb-0">
+                                                <input class="form-check-input me-2" type="checkbox" value=""
+                                                    id="form2Example3" />
+                                                <label class="form-check-label" for="form2Example3">
+                                                    Remember me
+                                                </label>
+                                            </div>
+
+                                            <a href="#!" class="text-body">Forgot password?</a>
+                                        </div>
+
+                                        <div class="text-center text-lg-start mt-4 pt-2 d-grid gap-2">
+                                            <button type="submit" class="btn btn-outline-primary fw-bold">Login</button>
+                                            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!" class="link-success" data-bs-toggle="modal" data-bs-target="#staticBackdropRegister">Register</a></p>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="d-flex flex-column flex-md-row text-center rounded text-md-start justify-content-between py-2 px-2 mt-xl-1 px-xl-3">
+                            Copyright
+                            <div class="text-primary mb-0">
+                                2022© Kelompok 6. All rights reserved.
+                            </div>
+                        </div> -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+
+</html>
